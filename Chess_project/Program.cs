@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ChessBoard;
 
 namespace Chess_project
 {
@@ -10,6 +7,7 @@ namespace Chess_project
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
