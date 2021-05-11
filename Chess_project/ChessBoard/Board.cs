@@ -14,5 +14,10 @@ namespace ChessBoard
             this.colunas = colunas;
             pecas = new Piace[linhas, colunas];
         }
+
+        public Piace peca(int linha, int coluna)
+        {
+            return pecas[linha, coluna];
+        }
     }
 }

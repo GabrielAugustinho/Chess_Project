@@ -7,7 +7,11 @@ namespace Chess_project
     {
         static void Main(string[] args)
         {
+            Board tab = new Board(8, 8);
 
+            Screem.imprimirTabuleiro(tab);
+
+            Console.ReadLine();
         }
     }
 }
