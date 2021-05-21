@@ -45,8 +45,17 @@
   <ItemGroup>
     <Compile Include="ChessBoard\Board.cs" />
     <Compile Include="ChessBoard\Enums\Color.cs" />
+    <Compile Include="ChessBoard\Exceptions\BoardExceptions.cs" />
     <Compile Include="ChessBoard\Piace.cs" />
     <Compile Include="ChessBoard\Position.cs" />
+    <Compile Include="Chess\MatchChess.cs" />
+    <Compile Include="Chess\Piaces\Bishop.cs" />
+    <Compile Include="Chess\Piaces\Hourse.cs" />
+    <Compile Include="Chess\Piaces\King.cs" />
+    <Compile Include="Chess\Piaces\Peon.cs" />
+    <Compile Include="Chess\Piaces\Queen.cs" />
+    <Compile Include="Chess\Piaces\Tower.cs" />
+    <Compile Include="Chess\PositionChass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screem.cs" />

@@ -3,19 +3,52 @@ using ChessBoard.Enums;
 
 namespace ChessBoard
 {
-    class Piace
+    abstract class Piace
     {
         public Position posicao { get; set; }
         public Color cor { get; protected set; }
-        public int QteMovimento { get; protected set; }
+        public int qteMovimentos { get; protected set; }
         public Board tab { get; protected set; }
 
-        public Piace(Position posicao, Color cor, Board tab)
+        public Piace(Board tab, Color cor)
         {
-            this.posicao = posicao;
+            this.posicao = null;
             this.cor = cor;
             this.tab = tab;
-            QteMovimento = 0;
+            qteMovimentos = 0;
         }
+
+        public void incrementarQteMovimentos()
+        {
+            qteMovimentos++;
+        }
+
+        public void decrementarQteMovimentos()
+        {
+            qteMovimentos--;
+        }
+
+        public bool existeMovimentosPossiveis()
+        {
+            bool[,] mat = movimentosPossiveis();
+            for (int i = 0; i < tab.linhas; i++)
+            {
+                for (int j = 0; j < tab.colunas; j++)
+                {
+                    if (mat[i, j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public bool MovimentoPossivel(Position pos)
+        {
+            return movimentosPossiveis()[pos.linha, pos.coluna];
+        }
+
+        public abstract bool[,] movimentosPossiveis();
     }
 }
